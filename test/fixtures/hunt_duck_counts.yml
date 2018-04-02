@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hunt_id: 1
+  duck_id: 1
+  drake_count: 1
+  hen_count: 1
+  is_group: false
+  is_individual: false
+
+two:
+  hunt_id: 1
+  duck_id: 1
+  drake_count: 1
+  hen_count: 1
+  is_group: false
+  is_individual: false

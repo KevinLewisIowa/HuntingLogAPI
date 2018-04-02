@@ -26,6 +26,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
+    @sessiontoken = request.headers["sessiontoken"] #this can be used places to get the session token, as long as I pass it in the headers
     if @user.update(user_params)
       render json: @user
     else
@@ -36,6 +37,24 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
+  end
+  
+  # this is for logging in
+  def login
+    @user = User.find_by(username: params[:username]);
+    if @user && @user.authenticate(params[:password])
+      o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
+      string = (0...50).map { o[rand(o.length)] }.join
+      @user.update_attribute(:session_token, string)
+      @user.save
+      render json: @user
+    else
+      render json: 'bad login'
+    end
+  end
+  
+  def logout
+    # erase the user's session token, need to add the route
   end
 
   private
