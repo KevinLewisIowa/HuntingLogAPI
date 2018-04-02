@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get     'partnersForUser' => 'partners#partnersForUser'
   get     'ducksForUser' => 'ducks#ducksForUser'
   get     'locationsForUser' => 'locations#locationsForUser'
+  get     'getUserByToken' => 'users#getUserByToken'
   resources :hunts
   resources :users
   

@@ -53,6 +53,12 @@ class UsersController < ApplicationController
     end
   end
   
+  def getUserByToken
+    @userobject = User.find_by(session_token: params[:sessionToken])
+    
+    render json: @userobject
+  end
+  
   def logout
     # erase the user's session token, need to add the route
   end
