@@ -37,6 +37,12 @@ class PartnersController < ApplicationController
   def destroy
     @partner.destroy
   end
+  
+  def partnersForUser
+    @partners = Partner.find_by(user_id: params[:userId])
+    
+    render json: @partners
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

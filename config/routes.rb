@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get     'getDucksForHunt' => 'hunt_duck_counts#getDucksForHunt'
   get     'partnersForHunt' => 'hunt_partners#partnersForHunt'
   get     'huntsForUser' => 'hunts#huntsForUser'
+  get     'partnersForUser' => 'partners#partnersForUser'
+  get     'ducksForUser' => 'ducks#ducksForUser'
+  get     'locationsForUser' => 'locations#locationsForUser'
   resources :hunts
   resources :users
   

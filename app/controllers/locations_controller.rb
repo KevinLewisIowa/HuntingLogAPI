@@ -32,6 +32,12 @@ class LocationsController < ApplicationController
       render json: @location.errors, status: :unprocessable_entity
     end
   end
+  
+  def locationsForUser
+    @locations = Location.find_by(user_id: params[:userId])
+    
+    render json: @locations
+  end
 
   # DELETE /locations/1
   def destroy

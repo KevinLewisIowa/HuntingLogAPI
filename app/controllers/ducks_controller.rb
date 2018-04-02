@@ -37,6 +37,12 @@ class DucksController < ApplicationController
   def destroy
     @duck.destroy
   end
+  
+  def ducksForUser
+    @ducks = Duck.find_by(user_id: params[:userId])
+    
+    render json: @ducks
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
