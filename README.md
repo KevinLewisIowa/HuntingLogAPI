@@ -40,7 +40,7 @@ Things you may want to cover:
 * new terminal do curl -H "Content-Type:application/json; charset=utf-8" -d '{ "user" : { "username" : "testusername", "email" : "email@gmail.com", "password" : "password", "session_token" : "aslerkjaslelrkser" } }' https://hunting-log-api-kevinlewis2.c9users.io/users
 * curl -H "Content-Type:application/json; charset=utf-8" https://hunting-log-api-kevinlewis2.c9users.io/users
 
-
+*rails generate migration AddSomethingToSomething
 *gemfile.rb gem 'bcrypt', '~> 3.1.7'    then run bundle install
 * in User class add has_secure_password
 * 
@@ -75,3 +75,9 @@ Things you may want to cover:
 *  
 
  * continue reading here: https://www.pluralsight.com/guides/ruby-ruby-on-rails/token-based-authentication-with-ruby-on-rails-5-api
+ * 
+ 
+* POTENTIAL IMAGE STUFF
+*  https://stackoverflow.com/questions/47443659/angular-4-rails-5-paperclip-file-upload
+*  https://github.com/thoughtbot/paperclip
+*  
