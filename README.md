@@ -81,3 +81,20 @@ Things you may want to cover:
 *  https://stackoverflow.com/questions/47443659/angular-4-rails-5-paperclip-file-upload
 *  https://github.com/thoughtbot/paperclip
 *  
+
+* GIT COMMANDS
+* git fetch                         // gets list of existing branches
+* git checkout myBranch             // if branch already made
+* 
+
+*git checkout -b newBranchName       // creates a new branch with this name based on the current code you see
+*git add .                           // adds all of your changes
+*git commit -m "the message"         // gets your changes ready to push
+*git push origin newBranchName       // pushes your changes to this new branch on git
+*git checkout master                // checkout master
+*git pull origin master             // pull latest from master
+*git merge test                     // merge test into this locally
+*git push origin master             // push this merge to the git master
+
+*git push heroku master             // pushes this current code to heroku master (deploys it)
+
